@@ -1,0 +1,9 @@
+#!/bin/bash
+
+firstString=$(pwd)
+secondString=~
+secondString="$secondString/"
+thirdString=""
+url="http://localhost:8888/notebooks/${firstString/$secondString/$thirdString}/$1"
+
+xdg-open $url >/dev/null 2>&1
